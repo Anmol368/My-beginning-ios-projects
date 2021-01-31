@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LightsOut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3E-Bc-uX5">
+                                <rect key="frame" x="134" y="300" width="106" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="82k-US-47r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-Cq-O4I">
+                                <rect key="frame" x="121" y="119" width="133" height="42"/>
+                                <color key="backgroundColor" red="0.1022288095" green="0.02372074679" blue="0.12430507690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Lights Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lightsOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wnV-OY-sID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugU-cC-2jQ">
+                                <rect key="frame" x="121" y="452" width="133" height="50"/>
+                                <color key="backgroundColor" red="0.067850528790000003" green="0.73826142130000005" blue="0.55942776490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Lights In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="lightsInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0X0-F7-pMH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.66524529457092285" green="0.92666155099868774" blue="0.77672821283340454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ugU-cC-2jQ" firstAttribute="top" secondItem="Y3E-Bc-uX5" secondAttribute="bottom" constant="85" id="4Ox-We-nsl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugU-cC-2jQ" secondAttribute="bottom" constant="165" id="7z9-nY-feQ"/>
+                            <constraint firstItem="Y3E-Bc-uX5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F0B-Mq-UJo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Z8-Cq-O4I" secondAttribute="trailing" constant="121" id="LTc-CI-NZr"/>
+                            <constraint firstItem="Y3E-Bc-uX5" firstAttribute="centerX" secondItem="8Z8-Cq-O4I" secondAttribute="centerX" id="OHZ-CC-6MD"/>
+                            <constraint firstItem="Y3E-Bc-uX5" firstAttribute="centerX" secondItem="ugU-cC-2jQ" secondAttribute="centerX" id="VPd-vn-GTy"/>
+                            <constraint firstItem="Y3E-Bc-uX5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VgG-bm-cY4"/>
+                            <constraint firstItem="ugU-cC-2jQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="a3e-j1-Keh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ugU-cC-2jQ" secondAttribute="trailing" constant="121" id="htY-aP-0kg"/>
+                            <constraint firstItem="Y3E-Bc-uX5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="jtz-8J-0tm"/>
+                            <constraint firstItem="8Z8-Cq-O4I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="kXm-5W-Fax"/>
+                            <constraint firstItem="8Z8-Cq-O4I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="s4D-89-lgP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+</document>
